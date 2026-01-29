@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reclutamiento Clan - Angel</title>
+    <style>
+        /* --- ESTILOS (CSS) --- */
+        body {
+            background-color: #000000; /* Fondo Negro */
+            color: #ffffff;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .caja-formulario {
+            background-color: #1a1a1a; /* Gris muy oscuro */
+            padding: 30px;
+            border-radius: 12px;
+            border: 2px solid #ff0000; /* Borde Rojo */
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: #ff0000;
+            text-align: center;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .campo {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #ff0000;
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #000000;
+            border: 1px solid #444;
+            color: #ffffff;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #ff0000;
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ff0000;
+            color: #ffffff;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 6px;
+            font-size: 16px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #b30000;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+        }
+
+        button:disabled {
+            background-color: #444;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        ::placeholder {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="caja-formulario">
+    <h2>Unirse al Clan</h2>
+
+    <form id="clanForm" action="https://formspree.io/f/mykjwkvl" method="POST">
+        
+        <div class="campo">
+            <label>Usuario de Discord:</label>
+            <input type="text" name="discord_user" placeholder="Ej: Angel#0001" required>
+        </div>
+
+        <div class="campo">
+            <label>Nombre de usuario en Hytale:</label>
+            <input type="text" name="hytale_user" placeholder="Tu nick en Hytale">
+        </div>
+
+        <div class="campo">
+            <label>¿Has jugado Minecraft alguna vez?</label>
+            <select name="jugado_minecraft" required>
+                <option value="" disabled selected>Selecciona una respuesta</option>
+                <option value="si">Sí, mucho</option>
+                <option value="un_poco">Un poco / Soy nuevo</option>
+                <option value="no">No, nunca</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label>¿Juegas en más servidores a la vez?</label>
+            <input type="text" name="otros_servidores" placeholder="¿Cuáles?">
+        </div>
+
+        <div class="campo">
+            <label>¿Cada cuánto te conectas a jugar?</label>
+            <input type="text" name="frecuencia_conexion" placeholder="Ej: Diario / Solo findes" required>
+        </div>
+
+        <div class="campo">
+            <label>¿Has estado en algún otro clan? ¿En cuál?</label>
+            <input type="text" name="clan_anterior" placeholder="Nombre del clan o 'Ninguno'">
+        </div>
+
+        <div class="campo">
+            <label>¿Qué habilidades puedes aportar?</label>
+            <textarea name="habilidades" rows="3" placeholder="PVP, construcción, redstone..."></textarea>
+        </div>
+
+        <button type="submit" id="submitBtn">Enviar Solicitud</button>
+    </form>
+</div>
+
+<script>
+    const formulario = document.getElementById('clanForm');
+    const boton = document.getElementById('submitBtn');
+
+    formulario.addEventListener('submit', function() {
+        boton.innerText = "ENVIANDO...";
+        boton.disabled = true;
+            });
+</script>
+
+</body>
+</html>
