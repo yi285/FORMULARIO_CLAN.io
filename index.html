@@ -106,15 +106,15 @@
     <h2>Unirse al Clan</h2>
 
     <form id="clanForm" action="https://formspree.io/f/mykjwkvl" method="POST">
-        
+        <img src="RedDragons_Logo.png" alt="Imagen del Clan" style="display: block; margin: 0 auto 20px auto; max-width: 100%; height: auto; border-radius: 8px;"s>
         <div class="campo">
             <label>Usuario de Discord:</label>
-            <input type="text" name="discord_user" placeholder="Ej: Angel#0001" required>
+            <input type="text" name="discord_user" placeholder="Ej: Tuusuario#0001" required>
         </div>
 
         <div class="campo">
             <label>Nombre de usuario en Hytale:</label>
-            <input type="text" name="hytale_user" placeholder="Tu nick en Hytale">
+            <input type="text" name="hytale_user" placeholder="Tu nick en Hytale" required>
         </div>
 
         <div class="campo">
@@ -129,7 +129,7 @@
 
         <div class="campo">
             <label>¿Juegas en más servidores a la vez?</label>
-            <input type="text" name="otros_servidores" placeholder="¿Cuáles?">
+            <input type="text" name="otros_servidores" placeholder="¿Cuáles?" required>
         </div>
 
         <div class="campo">
@@ -139,12 +139,12 @@
 
         <div class="campo">
             <label>¿Has estado en algún otro clan? ¿En cuál?</label>
-            <input type="text" name="clan_anterior" placeholder="Nombre del clan o 'Ninguno'">
+            <input type="text" name="clan_anterior" placeholder="Nombre del clan o 'Ninguno'" required>
         </div>
 
         <div class="campo">
             <label>¿Qué habilidades puedes aportar?</label>
-            <textarea name="habilidades" rows="3" placeholder="PVP, construcción, redstone..."></textarea>
+            <textarea name="habilidades" rows="3" placeholder="PVP, construcción, redstone..." required></textarea>
         </div>
 
         <button type="submit" id="submitBtn">Enviar Solicitud</button>
