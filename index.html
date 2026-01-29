@@ -7,7 +7,7 @@
     <style>
         /* --- ESTILOS (CSS) --- */
         body {
-            background-color: #000000; /* Fondo Negro */
+            background-color: #000000;
             color: #ffffff;
             font-family: 'Segoe UI', Arial, sans-serif;
             display: flex;
@@ -19,10 +19,10 @@
         }
 
         .caja-formulario {
-            background-color: #1a1a1a; /* Gris muy oscuro */
+            background-color: #1a1a1a;
             padding: 30px;
             border-radius: 12px;
-            border: 2px solid #ff0000; /* Borde Rojo */
+            border: 2px solid #ff0000;
             width: 100%;
             max-width: 500px;
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
@@ -68,6 +68,17 @@
             box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
         }
 
+        .aviso-privacidad {
+            font-size: 11px;
+            color: #bbbbbb; /* Un poco más claro para que se lea bien */
+            text-align: center;
+            margin: 15px 0;
+            line-height: 1.4;
+            background: rgba(255, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+
         button {
             width: 100%;
             padding: 15px;
@@ -106,7 +117,8 @@
     <h2>Unirse al Clan</h2>
 
     <form id="clanForm" action="https://formspree.io/f/mykjwkvl" method="POST">
-        <img src="RedDragons_Logo.png" alt="Imagen del Clan" style="display: block; margin: 0 auto 20px auto; max-width: 100%; height: auto; border-radius: 8px;"s>
+        <img src="RedDragons_Logo.png" alt="Imagen del Clan" style="display: block; margin: 0 auto 20px auto; max-width: 100%; height: auto; border-radius: 8px;">
+        
         <div class="campo">
             <label>Usuario de Discord:</label>
             <input type="text" name="discord_user" placeholder="Ej: Tuusuario#0001" required>
@@ -147,6 +159,10 @@
             <textarea name="habilidades" rows="3" placeholder="PVP, construcción, redstone..." required></textarea>
         </div>
 
+        <p class="aviso-privacidad">
+            <strong>AVISO DE PRIVACIDAD:</strong> Al enviar este formulario, aceptas que tus datos sean revisados <strong>únicamente por los dos líderes del clan</strong> para gestionar tu entrada. No compartiremos tu información con nadie más.
+        </p>
+
         <button type="submit" id="submitBtn">Enviar Solicitud</button>
     </form>
 </div>
@@ -158,7 +174,7 @@
     formulario.addEventListener('submit', function() {
         boton.innerText = "ENVIANDO...";
         boton.disabled = true;
-            });
+    });
 </script>
 
 </body>
